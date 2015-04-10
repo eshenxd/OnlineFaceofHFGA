@@ -1,0 +1,39 @@
+﻿生成启动时间为 2015/4/10 16:39:00。
+     1>项目“E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\OnlineFaceofHFGAv1.0.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\software\vs2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\work\vs2010 workspace\onlinefaceofhfgav1.0\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\software\vs2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\Debug\OnlineFaceofHFGAv1.0.exe" /INCREMENTAL /NOLOGO /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\Debug\OnlineFaceofHFGAv1.0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\Debug\OnlineFaceofHFGAv1.0.lib" /MACHINE:X86 Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest.res
+         Debug\detect_face.obj
+         Debug\drawImage.obj
+         Debug\getCardInfo.obj
+         Debug\getFiles.obj
+         Debug\get_cnn_feature.obj
+         Debug\recognition_mode.obj
+         Debug\register_mode.obj
+         Debug\version_info_show.obj
+         Debug\video_camera.obj
+         Debug\create_new_thread.obj
+         Debug\main.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest" /manifest Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest D:\software\vs2010\VC\Include\Manifest\dpiaware.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         OnlineFaceofHFGAv1.0.vcxproj -> E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\Debug\OnlineFaceofHFGAv1.0.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\OnlineFaceofHFGAv1.0.unsuccessfulbuild”。
+         正在对“Debug\OnlineFaceofHFGAv1.0.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Work\VS2010 Workspace\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.43

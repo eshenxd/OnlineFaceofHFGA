@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\software_info">
+      <UniqueIdentifier>{549ba108-753c-4b2f-aca3-81b8ac5883dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\cnn_feature">
+      <UniqueIdentifier>{5dc3d141-2368-44b4-8d0c-f9f55513c974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Camera">
+      <UniqueIdentifier>{c78fba72-6880-4807-9e2a-de6298ac9e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\face_detector">
+      <UniqueIdentifier>{5af9d117-9e72-432d-9752-1bb0d7d3c4f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Card">
+      <UniqueIdentifier>{6b75dd9c-1cce-4253-b443-0bb3c1147283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mode">
+      <UniqueIdentifier>{1c544927-cf38-4207-b3f8-1704d270c7c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\version_info_show.cpp">
+      <Filter>源文件\software_info</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_cnn_feature.cpp">
+      <Filter>源文件\cnn_feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video_camera.cpp">
+      <Filter>源文件\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\detect_face.cpp">
+      <Filter>源文件\face_detector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\drawImage.cpp">
+      <Filter>源文件\face_detector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\getCardInfo.cpp">
+      <Filter>源文件\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\getFiles.cpp">
+      <Filter>源文件\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\recognition_mode.cpp">
+      <Filter>源文件\mode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\register_mode.cpp">
+      <Filter>源文件\mode</Filter>
+    </ClCompile>
+    <ClCompile Include="create_new_thread.cpp">
+      <Filter>源文件\cnn_feature</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\detect_face.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\get_cnn_feature.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\version_info_show.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\video_camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\drawImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\getCardInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\header.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\create_new_thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
