@@ -15,13 +15,16 @@ void register_mode()
 	cout<<"开始注册过程..\n";
 
 	Main job;
+	job.face_frame_num=0;
+	job.mode_index=1;
+
 	People people;//保存视频中出现的人物信息
 	Card_Info info("D:/photo");
 
 	//新建线程
 	create_new_thread(&job);
 
-	job.face_frame_num=0;
+	
 
 	//调摄像头
 	Camera cam;
@@ -69,6 +72,7 @@ void register_mode()
 
 				else if(job.face_frame_num==10)
 				{
+					draw_image(job.pos,"Register ...",job.image_Show,cvScalar(255,0,255));
 					/* 截取人脸图片 */
 					CvRect rect = cvRect(job.pos[0], job.pos[1], job.pos[2] - job.pos[0], job.pos[3] - job.pos[1]);
 					job.image_face_tmp = cvCreateImage(cvSize(job.pos[2] - job.pos[0], job.pos[3] - job.pos[1]),
@@ -98,7 +102,7 @@ void register_mode()
 			{
 				job.face_frame_num=0;
 				info.flag=false;
-				job.Compare_OK=false;
+				job.register_OK=false;
 			}
 		}
 

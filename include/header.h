@@ -31,6 +31,7 @@ public:
 	IplImage* image;
 	IplImage* card_pic;
 	double* feature;
+	double feature_c[256];
 };
 
 class Main
@@ -48,7 +49,9 @@ public:
 	cv::Mat image_Face;    /**  face image for cnn feature extract */
 	IplImage* image_face_tmp;
 
-	bool operate_flag;
+	std::vector<People>Data;   /*save the compared faces data*/
+
+	int mode_index;//模式编号 1为注册，2为识别
 	bool register_OK;//注册完成
 	bool Compare_OK;//比对完成
 	CEvent g_event;

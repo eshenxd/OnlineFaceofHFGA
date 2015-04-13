@@ -34,6 +34,9 @@
     <Filter Include="源文件\Register">
       <UniqueIdentifier>{7c7bd59c-17a2-4417-96f2-90ac4863157b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\face_compare">
+      <UniqueIdentifier>{7a008db7-b6b3-4f23-80e2-cc472c25e342}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,6 +75,12 @@
     <ClCompile Include="..\src\register.cpp">
       <Filter>源文件\Register</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\face_compare.cpp">
+      <Filter>源文件\face_compare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\show_compare_result.cpp">
+      <Filter>源文件\face_compare</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\detect_face.h">
@@ -99,6 +108,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\register.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\face_compare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\show_compare_result.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

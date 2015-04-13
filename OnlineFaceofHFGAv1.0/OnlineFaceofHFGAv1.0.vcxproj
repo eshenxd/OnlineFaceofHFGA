@@ -81,12 +81,14 @@
   <ItemGroup>
     <ClCompile Include="..\src\detect_face.cpp" />
     <ClCompile Include="..\src\drawImage.cpp" />
+    <ClCompile Include="..\src\face_compare.cpp" />
     <ClCompile Include="..\src\getCardInfo.cpp" />
     <ClCompile Include="..\src\getFiles.cpp" />
     <ClCompile Include="..\src\get_cnn_feature.cpp" />
     <ClCompile Include="..\src\recognition_mode.cpp" />
     <ClCompile Include="..\src\register.cpp" />
     <ClCompile Include="..\src\register_mode.cpp" />
+    <ClCompile Include="..\src\show_compare_result.cpp" />
     <ClCompile Include="..\src\version_info_show.cpp" />
     <ClCompile Include="..\src\video_camera.cpp" />
     <ClCompile Include="create_new_thread.cpp" />
@@ -96,10 +98,12 @@
     <ClInclude Include="..\include\create_new_thread.h" />
     <ClInclude Include="..\include\detect_face.h" />
     <ClInclude Include="..\include\drawImage.h" />
+    <ClInclude Include="..\include\face_compare.h" />
     <ClInclude Include="..\include\getCardInfo.h" />
     <ClInclude Include="..\include\get_cnn_feature.h" />
     <ClInclude Include="..\include\header.h" />
     <ClInclude Include="..\include\register.h" />
+    <ClInclude Include="..\include\show_compare_result.h" />
     <ClInclude Include="..\include\version_info_show.h" />
     <ClInclude Include="..\include\video_camera.h" />
   </ItemGroup>

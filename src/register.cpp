@@ -14,6 +14,8 @@ void  Register::register_init()
 	InfoFilePath=SavePath+"file/";
 
 	CardNumPath=SavePath+"cardnum/";
+
+	CardPicPath=SavePath+"cardpic/";
 }
 
 void Register::save_register_info(People people)
@@ -21,7 +23,7 @@ void Register::save_register_info(People people)
 	string ImagePath_tmp=ImagePath+people.name+".jpg";
 	string InfoFilePath_tmp=InfoFilePath+people.name+".dat";
 	string CardNumPath_tmp=CardNumPath+people.name+".dat";
-	string CardPicPath_tmp=ImagePath+"card.jpg";
+	string CardPicPath_tmp=CardPicPath+people.name+".jpg";
 	
 	//保存注册图像
 	cvSaveImage(ImagePath_tmp.c_str(),people.image);
@@ -45,12 +47,15 @@ void Register::save_register_info(People people)
 	
 }
 
+
+
 //读注册文件
-void Register::load_register_info(vector<People>&people)
+bool Register::load_register_info(vector<People>&people)
 {
 	vector<string>ImgFilePath;
 	vector<string>FeatureFilePath;
 	vector<string>CardNumFilePath;
+	vector<string>CardPicFilePath;
 
 	People tmp;
 
@@ -59,14 +64,23 @@ void Register::load_register_info(vector<People>&people)
 	getFiles(ImagePath,ImgFilePath);
 	getFiles(InfoFilePath,FeatureFilePath);
 	getFiles(CardNumPath,CardNumFilePath);
+	getFiles(CardPicPath,CardPicFilePath);
+
+	if(ImgFilePath.size()!=FeatureFilePath.size()||ImgFilePath.size()!=CardNumFilePath.size()||ImgFilePath.size()!=CardPicFilePath.size())
+	{
+		cout<<"注册文件库已损坏，请重新注册！\n";
+		return false;
+	}
 
 	for(unsigned int ix=0;ix<FeatureFilePath.size();++ix)
 	{
 		char* fname=new char[20];
 		_splitpath(FeatureFilePath[ix].c_str(),NULL,NULL,fname,NULL);
 
+		//姓名
 		tmp.name=(string)fname;
 
+		//特征
 		ifstream fpIn;
 		fpIn.open(FeatureFilePath[ix].c_str(),ios::in);
 
@@ -76,13 +90,17 @@ void Register::load_register_info(vector<People>&people)
 		}
 		fpIn.close();
 
+		//身份证号
 		fpIn.open(CardNumFilePath[ix].c_str(),ios::in);
 		fpIn>>tmp.cardNum;
 		fpIn.close();
 
+		//视频图片
+		tmp.image=cvLoadImage(ImgFilePath[ix].c_str(),1);
+		tmp.card_pic=cvLoadImage(CardPicFilePath[ix].c_str(),1);
 
 		people.push_back(tmp);
 	}
 
+	return true;
 }
-
