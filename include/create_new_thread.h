@@ -7,7 +7,8 @@
 void create_new_thread(Main* job);
 
 void __cdecl feature_operate(void* pThis);
-//static unsigned __cdecl video_show(void* pThis);
 
+
+void recognition_operate(Main* job);
 
 #endif

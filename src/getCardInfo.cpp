@@ -12,6 +12,7 @@ void Card_Info::detectAddFile()
 	if(files.size()==1)
 		{
 			ImagePath=files[0];
+			card_pic=cvLoadImage(files[0].c_str(),1);
 			flag=true;
 			remove(files[0].c_str());
 	    }
@@ -53,3 +54,7 @@ string Card_Info::get_card_number()const
 	return card_number;
 }
 
+IplImage* Card_Info::get_card_pic()
+{
+	return card_pic;
+}

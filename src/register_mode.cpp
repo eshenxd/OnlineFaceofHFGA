@@ -43,6 +43,7 @@ void register_mode()
 			//有人刷身份证
 			people.name=info.get_card_name();
 			people.cardNum=info.get_card_number();
+			people.card_pic=info.get_card_pic();
 
 			job.people=people;
 
@@ -83,16 +84,21 @@ void register_mode()
 					
 				}
 
-				else if(job.face_frame_num>10)
+				else if(job.face_frame_num>10&&job.register_OK==false)
 				{
 					draw_image(job.pos,"Register ...",job.image_Show,cvScalar(255,0,255));
-				}		
+				}
+				else if(job.face_frame_num>10/*&&job.register_OK==true*/)
+				{
+					draw_image(job.pos,"Register OK ...",job.image_Show,cvScalar(0,0,255));
+				}
 
 	    }
 			else
 			{
 				job.face_frame_num=0;
 				info.flag=false;
+				job.Compare_OK=false;
 			}
 		}
 

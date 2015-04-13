@@ -85,6 +85,7 @@
     <ClCompile Include="..\src\getFiles.cpp" />
     <ClCompile Include="..\src\get_cnn_feature.cpp" />
     <ClCompile Include="..\src\recognition_mode.cpp" />
+    <ClCompile Include="..\src\register.cpp" />
     <ClCompile Include="..\src\register_mode.cpp" />
     <ClCompile Include="..\src\version_info_show.cpp" />
     <ClCompile Include="..\src\video_camera.cpp" />
@@ -98,6 +99,7 @@
     <ClInclude Include="..\include\getCardInfo.h" />
     <ClInclude Include="..\include\get_cnn_feature.h" />
     <ClInclude Include="..\include\header.h" />
+    <ClInclude Include="..\include\register.h" />
     <ClInclude Include="..\include\version_info_show.h" />
     <ClInclude Include="..\include\video_camera.h" />
   </ItemGroup>

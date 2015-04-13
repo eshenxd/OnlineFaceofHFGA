@@ -10,6 +10,8 @@
 #include "getFiles.h"
 
 #include <iostream>
+#include "header.h"
+
 #include <string>
 #include <vector>
 
@@ -23,6 +25,8 @@ public:
 
 	std::string get_card_name()const; //获取照片的姓名
 	std::string get_card_number()const; //获取照片的身份证号码
+	IplImage* get_card_pic();//获取身份证照片
+
 	void detectAddFile();
 private:
 
@@ -32,7 +36,7 @@ private:
 	std::string name;
 	std::string card_number;
 
-	
+	IplImage* card_pic;
 
 };
 

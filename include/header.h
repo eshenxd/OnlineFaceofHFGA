@@ -29,6 +29,7 @@ public:
 	std::string name;
 	std::string cardNum;
 	IplImage* image;
+	IplImage* card_pic;
 	double* feature;
 };
 

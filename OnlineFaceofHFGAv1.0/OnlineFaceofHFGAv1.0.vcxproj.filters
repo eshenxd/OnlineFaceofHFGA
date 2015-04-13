@@ -31,6 +31,9 @@
     <Filter Include="源文件\mode">
       <UniqueIdentifier>{1c544927-cf38-4207-b3f8-1704d270c7c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Register">
+      <UniqueIdentifier>{7c7bd59c-17a2-4417-96f2-90ac4863157b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +69,9 @@
     <ClCompile Include="create_new_thread.cpp">
       <Filter>源文件\cnn_feature</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\register.cpp">
+      <Filter>源文件\Register</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\detect_face.h">
@@ -90,6 +96,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\create_new_thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\register.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
