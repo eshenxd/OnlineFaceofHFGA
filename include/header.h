@@ -39,10 +39,13 @@ class Main
 public:
 	IplImage* image_In;   /** <Input image*/
 	IplImage* image_Show; /* <show image*/
+	IplImage* image_gray;
+	IplImage* image_align;
 
 	double feature[256];     /** <cnn feature save*/
 	double Hash[48];      /*< hash code save */
 	int pos[4];
+	int keyPoints[10];
 
 	People people;        /*< save register information */
 
@@ -57,6 +60,8 @@ public:
 	CEvent g_event;
 
 	int face_frame_num;
+
+	int erro_file_count;
 };
 
 void register_mode();

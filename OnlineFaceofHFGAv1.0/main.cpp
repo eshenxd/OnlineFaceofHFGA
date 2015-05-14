@@ -13,6 +13,8 @@ int main()
 
 	cvNamedWindow("VIDEO", CV_WINDOW_AUTOSIZE);
 	
+	
+	
 	//选择软件模式
 
 	cout<<"请选择软件功能：[1/2]\n";

@@ -68,10 +68,61 @@ void recognition_operate(Main* job)
 	bool flag=reg.load_register_info(job->Data);
 	if(flag==false)return;
 
+	//printf("%f",job->Data[0].feature[0]);
+	//printf("%f",job->Data[0].feature[1]);
+	//printf("%f",job->Data[0].feature[2]);
+
 	double mindistance=face_compare(*job,people);
 
-	ShowResult show(people);
-	show.show_result();
+	/*if(mindistance<4.0)cout<<people.name<<endl;
+	else cout<<"not find!"<<endl;*/
+	cout<<people.name<<endl;
+	string jude_flag;
+	//cin>>jude_flag;
+
+	if(jude_flag=="no"||jude_flag=="No")
+	{
+		char count_tmp[10] ;
+		_itoa_s(job->erro_file_count,count_tmp,10);
+		string errorPath="../Error/"+(string)count_tmp+"/";
+		mkdir(errorPath.c_str());
+
+		string errorFile1=errorPath+"error1.txt";
+		//string errorFile2=errorPath+"error2.txt";
+		
+		ofstream fp1;
+		fp1.open(errorFile1.c_str(),ios::app);
+		//fp2.open(errorFile2.c_str(),ios::out);
+
+		for(int i=0;i<256;i++)
+		{
+			fp1<<job->feature[i]<<" ";
+			//fp2<<people.feature_c[i];
+		}
+
+		fp1<<"\n";
+
+		fp1.close();
+
+		fp1.open(errorFile1.c_str(),ios::app);
+
+		fp1<<people.name<<" ";
+
+		for(int i=0;i<256;i++)
+		{
+			
+			fp1<<people.feature_c[i]<<" ";
+			//fp2<<people.feature_c[i];
+		}
+
+		fp1<<"\n";
+		fp1<<"\n";
+
+		fp1.close();
+		
+	}
+	//ShowResult show(people);
+	//show.show_result();
 
 	job->Compare_OK=true;
 }

@@ -81,6 +81,8 @@
   <ItemGroup>
     <ClCompile Include="..\src\detect_face.cpp" />
     <ClCompile Include="..\src\drawImage.cpp" />
+    <ClCompile Include="..\src\faceAlign.cpp" />
+    <ClCompile Include="..\src\facePoint.cpp" />
     <ClCompile Include="..\src\face_compare.cpp" />
     <ClCompile Include="..\src\getCardInfo.cpp" />
     <ClCompile Include="..\src\getFiles.cpp" />
@@ -98,6 +100,8 @@
     <ClInclude Include="..\include\create_new_thread.h" />
     <ClInclude Include="..\include\detect_face.h" />
     <ClInclude Include="..\include\drawImage.h" />
+    <ClInclude Include="..\include\faceAlign.h" />
+    <ClInclude Include="..\include\facePoint.h" />
     <ClInclude Include="..\include\face_compare.h" />
     <ClInclude Include="..\include\getCardInfo.h" />
     <ClInclude Include="..\include\get_cnn_feature.h" />

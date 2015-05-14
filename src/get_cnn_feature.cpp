@@ -46,7 +46,7 @@ int get_cnn_feature(Mat imgSrc ,double* feature)
 	double *y=new double[256];
 	y=fv->data;
 
-	copy(y,y+255,feature);
+	copy(y,y+256,feature);
 
 	delete[] y;
 

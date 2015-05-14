@@ -81,6 +81,12 @@
     <ClCompile Include="..\src\show_compare_result.cpp">
       <Filter>源文件\face_compare</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\faceAlign.cpp">
+      <Filter>源文件\face_detector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\facePoint.cpp">
+      <Filter>源文件\face_detector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\detect_face.h">
@@ -114,6 +120,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\show_compare_result.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\faceAlign.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\facePoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

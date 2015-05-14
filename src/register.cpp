@@ -56,17 +56,18 @@ bool Register::load_register_info(vector<People>&people)
 	vector<string>FeatureFilePath;
 	vector<string>CardNumFilePath;
 	vector<string>CardPicFilePath;
+	people.clear();
 
 	People tmp;
 
-	tmp.feature=new double[MAX_FEATURE_SIZE];
+	//tmp.feature=new double[MAX_FEATURE_SIZE];
 
 	getFiles(ImagePath,ImgFilePath);
 	getFiles(InfoFilePath,FeatureFilePath);
-	getFiles(CardNumPath,CardNumFilePath);
-	getFiles(CardPicPath,CardPicFilePath);
+	//getFiles(CardNumPath,CardNumFilePath);
+	//getFiles(CardPicPath,CardPicFilePath);
 
-	if(ImgFilePath.size()!=FeatureFilePath.size()||ImgFilePath.size()!=CardNumFilePath.size()||ImgFilePath.size()!=CardPicFilePath.size())
+	if(ImgFilePath.size()!=FeatureFilePath.size())
 	{
 		cout<<"注册文件库已损坏，请重新注册！\n";
 		return false;
@@ -86,18 +87,18 @@ bool Register::load_register_info(vector<People>&people)
 
 		for(int j=0;j<MAX_FEATURE_SIZE;++j)
 		{
-			fpIn>>tmp.feature[j];
+			fpIn>>tmp.feature_c[j];
 		}
 		fpIn.close();
 
 		//身份证号
-		fpIn.open(CardNumFilePath[ix].c_str(),ios::in);
-		fpIn>>tmp.cardNum;
-		fpIn.close();
+		//fpIn.open(CardNumFilePath[ix].c_str(),ios::in);
+		//fpIn>>tmp.cardNum;
+		//fpIn.close();
 
 		//视频图片
 		tmp.image=cvLoadImage(ImgFilePath[ix].c_str(),1);
-		tmp.card_pic=cvLoadImage(CardPicFilePath[ix].c_str(),1);
+		//tmp.card_pic=cvLoadImage(CardPicFilePath[ix].c_str(),1);
 
 		people.push_back(tmp);
 	}

@@ -25,19 +25,23 @@ double face_compare(Main& job,People& people)
 {
 	vector<People>data=job.Data; 
 	double* feature=job.feature;
+	double* feature_tmp=new double[256];
+
 
 	double Max_sim=cala_Similarity(feature,data[0].feature_c);
+	//double Max_sim = cala_distance(feature,data[0].feature_c,256);
 	people.name=data[0].name;
 	people.image=data[0].image;
 	people.cardNum=data[0].cardNum;
 	people.card_pic=data[0].card_pic;
+	feature_tmp = data[0].feature_c;
 
 	int index_i;
 
 	for(unsigned int ix=1;ix<data.size();ix++)
 	{
 		double sim=cala_Similarity(feature,data[ix].feature_c);
-
+		//double sim = cala_distance(feature,data[ix].feature_c,256);
 		if(sim>Max_sim)
 		{
 			Max_sim=sim;
@@ -47,9 +51,16 @@ double face_compare(Main& job,People& people)
 			people.image=data[ix].image;
 			people.cardNum=data[ix].cardNum;
 			people.card_pic=data[ix].card_pic;
+
+
+			feature_tmp = data[ix].feature_c;
+			//copy(data[ix].feature_c,data[ix].feature_c+256,people.feature_c);
+			//people.feature=data[ix].feature_c;
 		}
 	}
 
+	copy(feature_tmp,feature_tmp+256,people.feature_c);
+	
 	return Max_sim;
 }
 
