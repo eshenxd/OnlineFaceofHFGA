@@ -3,6 +3,7 @@
 #include "register.h"
 #include "face_compare.h"
 #include "show_compare_result.h"
+#include "saveResult.h"
 
 using namespace std;
 
@@ -18,10 +19,12 @@ void __cdecl feature_operate(void* pThis)
 {
 	Main* job=(Main*)pThis;
 
+	
 
 	while(true)
 	{
 		WaitForSingleObject(job->g_event,INFINITE);
+
 
 		get_cnn_feature(job->image_Face,job->feature);
 		if(job->mode_index==1)
@@ -34,24 +37,29 @@ void __cdecl feature_operate(void* pThis)
 }
 
 void register_operate(Main* job)
-{
+{	
 	Register reg;
 	reg.register_init();
 
-	cout<<"\n";
-	cout<<"注册人信息：\n";
-	cout<<"/*"<<endl;
-	cout<<"姓      名："+job->people.name<<endl;
-	cout<<"身份证编号："+job->people.cardNum<<endl;
-	cout<<"*/"<<endl;
 	
+	
+	cout<<"\n";
+	cout<<"请输入注册人信息：\n";
+	cout<<"/*"<<endl;
+	
+	cin>>job->people.name;
+	cout<<"*/"<<endl;
 	People people;
+
+	
 
 	people.cardNum=job->people.cardNum;
 	people.feature=job->feature;
 	people.image=job->image_face_tmp;
 	people.name=job->people.name;
-	people.card_pic=job->people.card_pic;
+
+	
+	//people.card_pic=job->image_align;
 
 	reg.save_register_info(people);
 
@@ -65,64 +73,19 @@ void recognition_operate(Main* job)
 
 	People people;//存放比对结果
 
-	bool flag=reg.load_register_info(job->Data);
-	if(flag==false)return;
+	/*cvShowImage("test",job->image_align);
+	cvWaitKey(0);*/
 
-	//printf("%f",job->Data[0].feature[0]);
-	//printf("%f",job->Data[0].feature[1]);
-	//printf("%f",job->Data[0].feature[2]);
+	bool flag=reg.load_register_info(job->Data);//fasle
+	if(flag==false)return;
 
 	double mindistance=face_compare(*job,people);
 
-	/*if(mindistance<4.0)cout<<people.name<<endl;
-	else cout<<"not find!"<<endl;*/
-	cout<<people.name<<endl;
-	string jude_flag;
-	//cin>>jude_flag;
+	ShowResult show(people);
+	show.show_result();
 
-	if(jude_flag=="no"||jude_flag=="No")
-	{
-		char count_tmp[10] ;
-		_itoa_s(job->erro_file_count,count_tmp,10);
-		string errorPath="../Error/"+(string)count_tmp+"/";
-		mkdir(errorPath.c_str());
-
-		string errorFile1=errorPath+"error1.txt";
-		//string errorFile2=errorPath+"error2.txt";
-		
-		ofstream fp1;
-		fp1.open(errorFile1.c_str(),ios::app);
-		//fp2.open(errorFile2.c_str(),ios::out);
-
-		for(int i=0;i<256;i++)
-		{
-			fp1<<job->feature[i]<<" ";
-			//fp2<<people.feature_c[i];
-		}
-
-		fp1<<"\n";
-
-		fp1.close();
-
-		fp1.open(errorFile1.c_str(),ios::app);
-
-		fp1<<people.name<<" ";
-
-		for(int i=0;i<256;i++)
-		{
-			
-			fp1<<people.feature_c[i]<<" ";
-			//fp2<<people.feature_c[i];
-		}
-
-		fp1<<"\n";
-		fp1<<"\n";
-
-		fp1.close();
-		
-	}
-	//ShowResult show(people);
-	//show.show_result();
+	save_result(people.image,job->image_face_tmp);
+	
 
 	job->Compare_OK=true;
 }

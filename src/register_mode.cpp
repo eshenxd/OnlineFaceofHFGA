@@ -4,7 +4,8 @@
 #include "drawImage.h"
 #include "create_new_thread.h"
 #include "getCardInfo.h"
-
+#include "faceAlign.h"
+#include "facePoint.h"
 using namespace std;
 using namespace cv;
 
@@ -29,6 +30,9 @@ void register_mode()
 	//调摄像头
 	Camera cam;
 
+	FacePoints fp;
+	fp.load_model();
+
 	while(cam.suc_flag)
 	{//3
 		
@@ -37,11 +41,14 @@ void register_mode()
 		job.image_Show=cvCreateImage(cvGetSize(job.image_In),job.image_In->depth,job.image_In->nChannels);
 		cvCopy(job.image_In,job.image_Show);
 
-
+		job.image_gray = cvCreateImage(cvGetSize(job.image_In),8,1);
+		cvCvtColor(job.image_In,job.image_gray,CV_RGB2GRAY);
+		job.image_align=cvCreateImage(cvSize(60,60),job.image_In->depth,job.image_In->nChannels);
+		
 		//获取刷身份证的信息
-		info.detectAddFile();
+		//info.detectAddFile();
 
-		if (info.flag==true)
+		if (true)
 		{
 			//有人刷身份证
 			people.name=info.get_card_name();
@@ -73,7 +80,18 @@ void register_mode()
 				else if(job.face_frame_num==10)
 				{
 					draw_image(job.pos,"Register ...",job.image_Show,cvScalar(255,0,255));
-					/* 截取人脸图片 */
+					
+					/*< get face points */
+					fp.facePoint_init(job.image_gray);
+					fp.runFacePoints(1,job.pos);
+					fp.getFacePoints(job.keyPoints);
+
+					/*< face align */
+					FaceAlign fa(job.image_In,job.pos,job.keyPoints);
+					fa.runFaceAlign();
+					cvCopy(fa.getAlignimg(),job.image_align);
+
+					/*< 截取人脸图片 */
 					CvRect rect = cvRect(job.pos[0], job.pos[1], job.pos[2] - job.pos[0], job.pos[3] - job.pos[1]);
 					job.image_face_tmp = cvCreateImage(cvSize(job.pos[2] - job.pos[0], job.pos[3] - job.pos[1]),
 						job.image_In->depth, job.image_In->nChannels);
@@ -81,7 +99,10 @@ void register_mode()
 					cvCopy(job.image_In,job.image_face_tmp);
 					cvResetImageROI(job.image_In);
 
-					Mat matmtx(job.image_face_tmp,true);
+					
+					
+
+					Mat matmtx(job.image_align,true);
 					job.image_Face=matmtx;
 
 					job.g_event.SetEvent();
@@ -110,5 +131,7 @@ void register_mode()
 		cvWaitKey(2);
 
 		cvReleaseImage(&job.image_Show);
+		cvReleaseImage(&job.image_gray);
+		cvReleaseImage(&job.image_align);
 	}
 }

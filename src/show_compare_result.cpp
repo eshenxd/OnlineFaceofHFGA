@@ -10,8 +10,8 @@ ShowResult::ShowResult(People people)
 
 	show_image=cvCreateImage(cvGetSize(people.image),people.image->depth,people.image->nChannels);
 
-	cardPic=cvCreateImage(cvSize(204,252),people.card_pic->depth,people.card_pic->nChannels);
-	cvResize(people.card_pic,cardPic);
+	//cardPic=cvCreateImage(cvSize(204,252),people.card_pic->depth,people.card_pic->nChannels);
+	//cvResize(people.card_pic,cardPic);
 
 	cvCopy(people.image,show_image);
 
@@ -36,14 +36,14 @@ void ShowResult::show_result()
 	cvResize(show_image,img_result_show);
 
 	cvShowImage("RESULTS",img_result_show);
-	cvShowImage("CARD",cardPic);
+	//cvShowImage("CARD",cardPic);
 	cvWaitKey(2);
 
 	cout<<"\n";
 	cout<<"识别结果:"<<endl;
 	cout<<"/*"<<endl;
 	cout<<"         姓名："+show_message.name<<endl;
-	cout<<"         身份证编号："+show_message.cardNum<<endl;
+	//cout<<"         身份证编号："+show_message.cardNum<<endl;
 	cout<<"*/"<<endl;
 }
 

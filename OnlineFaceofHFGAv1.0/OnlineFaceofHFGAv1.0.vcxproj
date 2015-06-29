@@ -90,6 +90,7 @@
     <ClCompile Include="..\src\recognition_mode.cpp" />
     <ClCompile Include="..\src\register.cpp" />
     <ClCompile Include="..\src\register_mode.cpp" />
+    <ClCompile Include="..\src\saveResult.cpp" />
     <ClCompile Include="..\src\show_compare_result.cpp" />
     <ClCompile Include="..\src\version_info_show.cpp" />
     <ClCompile Include="..\src\video_camera.cpp" />
@@ -100,8 +101,6 @@
     <ClInclude Include="..\include\create_new_thread.h" />
     <ClInclude Include="..\include\detect_face.h" />
     <ClInclude Include="..\include\drawImage.h" />
-    <ClInclude Include="..\include\faceAlign.h" />
-    <ClInclude Include="..\include\facePoint.h" />
     <ClInclude Include="..\include\face_compare.h" />
     <ClInclude Include="..\include\getCardInfo.h" />
     <ClInclude Include="..\include\get_cnn_feature.h" />

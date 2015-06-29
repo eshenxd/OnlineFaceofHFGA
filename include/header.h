@@ -60,8 +60,6 @@ public:
 	CEvent g_event;
 
 	int face_frame_num;
-
-	int erro_file_count;
 };
 
 void register_mode();

@@ -13,8 +13,6 @@ int main()
 
 	cvNamedWindow("VIDEO", CV_WINDOW_AUTOSIZE);
 	
-	
-	
 	//选择软件模式
 
 	cout<<"请选择软件功能：[1/2]\n";
@@ -34,7 +32,7 @@ int main()
 
 		else if(function_num==2)
 		{
-			cvNamedWindow("CARD",CV_WINDOW_AUTOSIZE);
+			//cvNamedWindow("CARD",CV_WINDOW_AUTOSIZE);
 
 			recognition_mode();
 		}
