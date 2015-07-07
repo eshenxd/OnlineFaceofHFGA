@@ -87,7 +87,7 @@ bool Register::load_register_info(vector<People>&people)
 
 		for(int j=0;j<MAX_FEATURE_SIZE;++j)
 		{
-			fpIn>>tmp.feature[j];
+			fpIn>>tmp.feature_c[j];
 		}
 		fpIn.close();
 

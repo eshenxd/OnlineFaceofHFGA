@@ -1,17 +1,80 @@
-﻿生成启动时间为 2015/6/29 16:22:17。
-     1>项目“C:\Users\Ethan\Desktop\OnlineFaceofHFGA\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2015/7/7 15:45:24。
+     1>项目“E:\github\OnlineFaceofHFGA\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\OnlineFaceofHFGAv1.0.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\software\Visual Studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt create_new_thread.cpp
+         D:\software\vs2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\detect_face.cpp ..\src\drawImage.cpp ..\src\faceAlign.cpp ..\src\facePoint.cpp ..\src\face_compare.cpp ..\src\getCardInfo.cpp ..\src\getFiles.cpp ..\src\get_cnn_feature.cpp ..\src\recognition_mode.cpp ..\src\register.cpp ..\src\register_mode.cpp ..\src\saveResult.cpp ..\src\show_compare_result.cpp ..\src\version_info_show.cpp ..\src\video_camera.cpp create_new_thread.cpp main.cpp
+         main.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
          create_new_thread.cpp
          _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-     1>c:\users\ethan\desktop\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\software\visual studio 2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         video_camera.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         version_info_show.cpp
+         show_compare_result.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         register_mode.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         register.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\github\onlinefaceofhfga\src\register.cpp(79): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdlib.h(791) : 参见“_splitpath”的声明
+         recognition_mode.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         get_cnn_feature.cpp
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>d:\software\vs2010\vc\include\xutility(2227): warning C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+                 d:\software\vs2010\vc\include\xutility(2212) : 参见“std::_Copy_impl”的声明
+                 e:\github\onlinefaceofhfga\src\get_cnn_feature.cpp(49): 参见对正在编译的函数 模板 实例化“_OutIt std::copy<double*,double*>(_InIt,_InIt,_OutIt)”的引用
+                 with
+                 [
+                     _OutIt=double *,
+                     _InIt=double *
+                 ]
+         getFiles.cpp
+         getCardInfo.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\github\onlinefaceofhfga\src\getcardinfo.cpp(27): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdlib.h(791) : 参见“_splitpath”的声明
+         face_compare.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         drawImage.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+         detect_face.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>e:\github\onlinefaceofhfga\opencv\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\vs2010\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\github\onlinefaceofhfga\src\detect_face.cpp(93): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+         正在生成代码...
+         正在跳过...(未检测到相关更改)
+         saveResult.cpp
+         facePoint.cpp
+         faceAlign.cpp
        ManifestResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest.res" Debug\OnlineFaceofHFGAv1.0_manifest.rc 
        Link:
-         D:\software\Visual Studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ethan\Desktop\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.exe" /INCREMENTAL /NOLOGO /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Ethan\Desktop\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ethan\Desktop\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.lib" /MACHINE:X86 Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest.res
+         D:\software\vs2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.exe" /INCREMENTAL /NOLOGO /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.lib" /MACHINE:X86 Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest.res
          Debug\detect_face.obj
          Debug\drawImage.obj
          Debug\faceAlign.obj
@@ -29,17 +92,21 @@
          Debug\video_camera.obj
          Debug\create_new_thread.obj
          Debug\main.obj
+            正在创建库 E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.lib 和对象 E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.exp
+     1>saveResult.obj : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“saveResult.obj”或在“E:\github\OnlineFaceofHFGA\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>facePoint.obj : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“facePoint.obj”或在“E:\github\OnlineFaceofHFGA\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>faceAlign.obj : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“faceAlign.obj”或在“E:\github\OnlineFaceofHFGA\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest" /manifest Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest "D:\software\Visual Studio 2010\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\OnlineFaceofHFGAv1.0.exe.embed.manifest" /manifest Debug\OnlineFaceofHFGAv1.0.exe.intermediate.manifest D:\software\vs2010\VC\Include\Manifest\dpiaware.manifest
          所有输出均为最新。
        LinkEmbedManifest:
          所有输出均为最新。
-         OnlineFaceofHFGAv1.0.vcxproj -> C:\Users\Ethan\Desktop\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.exe
+         OnlineFaceofHFGAv1.0.vcxproj -> E:\github\OnlineFaceofHFGA\Debug\OnlineFaceofHFGAv1.0.exe
        FinalizeBuildStatus:
          正在删除文件“Debug\OnlineFaceofHFGAv1.0.unsuccessfulbuild”。
          正在对“Debug\OnlineFaceofHFGAv1.0.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“C:\Users\Ethan\Desktop\OnlineFaceofHFGA\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“E:\github\OnlineFaceofHFGA\OnlineFaceofHFGAv1.0\OnlineFaceofHFGAv1.0.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.84
+已用时间 00:00:29.50

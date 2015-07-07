@@ -108,5 +108,7 @@ void recognition_mode()
 
 		cvShowImage("VIDEO", job.image_Show);
 		cvWaitKey(2);
+		cvReleaseImage(&job.image_gray);
+		cvReleaseImage(&job.image_Show);
 	}
 }

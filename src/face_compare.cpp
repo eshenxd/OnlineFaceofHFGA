@@ -27,7 +27,7 @@ double face_compare(Main& job,People& people)
 	double* feature=job.feature;
 
 	//double Max_sim=cala_Similarity(feature,data[0].feature_c);
-	double Min_dis=cala_distance(feature,data[0].feature,256);
+	double Min_dis=cala_distance(feature,data[0].feature_c,256);
 	people.name=data[0].name;
 	people.image=data[0].image;
 	people.cardNum=data[0].cardNum;
